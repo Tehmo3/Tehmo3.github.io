@@ -1,9 +1,8 @@
 var main = function () {
-    wait(5000);
     $(function() {
         $(".typeSpace").typed({
-            strings: ["Hi."],
-            typespeed: 0
+            strings: ["^1000 Hi. ^2000 My name is Jasper Miles, and I'm a fullstack web developer from Melbourne, Australia."],
+            typespeed: 25
         });
     });
 }
