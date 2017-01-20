@@ -6,12 +6,26 @@ body {
     -moz-animation: backgroundGradient 23s ease infinite;
     -o-animation: backgroundGradient 23s ease infinite;
     animation: backgroundGradient 23s ease infinite;
+    overflow-x: hidden;
 }
 
 body .container {
     color: white;
-    font-size: 60px;
+    font-size: 5em;
     animation: HiAnimation 3s;
+}
+
+.navbar-default {
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.navbar.center .navbar-inner {
+    text-align: center;
+}
+.navbar.center .navbar-inner .nav {
+    float: none;
+    display:inline-block;
 }
 
 .circle {
@@ -19,6 +33,13 @@ body .container {
     width: 200px;
     height: 200px;
     background-color: white;
+    opacity: 0;
+    animation: CircleAppear 2s ease 2.5s 1 normal forwards;
+}
+
+@keyframes CircleAppear {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
 @-webkit-keyframes backgroundGradient {
@@ -62,7 +83,7 @@ body .container {
 }
 
 @keyframes HiAnimation {
-    0% { font-size: 30vw}
-    80% { font-size: 30vw}
-    100% { font-size: 5vw}
+    0% { font-size: 40em}
+    80% { font-size: 40em}
+    100% { font-size: 5em}
 }
