@@ -12,6 +12,7 @@ body {
 body .container {
     color: white;
     font-size: 5em;
+    opacity: 0;
     animation: HiAnimation 3s ease 0s 1 normal forwards;
 }
 
@@ -85,9 +86,9 @@ body .container {
 }
 
 @keyframes HiAnimation {
-    0% { font-size: 40em; position: relative; top: -300px;}
-    80% { font-size: 40em; position: relative; top: -300px;}
-    100% { font-size: 2em; position: relative; top: 0px;}
+    0% { font-size: 40em; position: relative; top: -300px; opacity: 0}
+    80% { font-size: 40em; position: relative; top: -300px; opacity: 1}
+    100% { font-size: 2em; position: relative; top: 0px; opacity: 1}
 }
 
 hr {
