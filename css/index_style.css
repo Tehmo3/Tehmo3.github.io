@@ -37,6 +37,8 @@ body .container {
 
 .typed-cursor{
     opacity: 1;
+    position: relative;
+    top: -5px;;
     -webkit-animation: blink 0.7s infinite;
     -moz-animation: blink 0.7s infinite;
     animation: blink 0.7s infinite;
