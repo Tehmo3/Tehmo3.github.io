@@ -11,8 +11,15 @@ body {
 body .container {
     color: white;
     font-size: 60px;
+    animation: HiAnimation 3s;
 }
 
+.circle {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    background-color: white;
+}
 
 @-webkit-keyframes backgroundGradient {
     0%{background-position:0% 50%}
@@ -20,11 +27,6 @@ body .container {
     100%{background-position:0% 50%}
 }
 @-moz-keyframes backgroundGradient {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@-o-keyframes backgroundGradient {
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
@@ -57,4 +59,10 @@ body .container {
     0% { opacity:1; }
     50% { opacity:0; }
     100% { opacity:1; }
+}
+
+@keyframes HiAnimation {
+    0% { font-size: 30vw}
+    80% { font-size: 30vw}
+    100% { font-size: 5vw}
 }
