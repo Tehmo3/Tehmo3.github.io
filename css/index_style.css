@@ -15,7 +15,7 @@ body .container {
     animation: HiAnimation 3s;
 }
 
-.navbar-default {
+.navbar-inverse {
     max-width: 300px;
     margin-left: auto;
     margin-right: auto;
