@@ -1,7 +1,7 @@
 var main = function () {
     $(function() {
         $(".typeSpace").typed({
-            strings: ["Hi."]
+            strings: ["Hi."],
             typespeed: 0
         });
     });
