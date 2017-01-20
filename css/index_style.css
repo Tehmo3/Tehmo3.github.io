@@ -83,7 +83,7 @@ body .container {
 }
 
 @keyframes HiAnimation {
-    0% { font-size: 40em}
-    80% { font-size: 40em}
-    100% { font-size: 5em}
+    0% { font-size: 40em; position: relative; top: -200px;}
+    80% { font-size: 40em; position: relative; top: -200px;}
+    100% { font-size: 5em; position: relative; top: 0px;}
 }
