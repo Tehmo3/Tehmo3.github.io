@@ -1,8 +1,8 @@
 var main = function () {
     $(function() {
         $(".typeSpace").typed({
-            strings: ["^1000 Hi. ^2000 My name is Jasper Miles,<br /> and I'm a full stack web developer from Melbourne, Australia."],
-            typespeed: 25,
+            strings: ["^1000 Hey! ^2000 My name is <b>Jasper Miles</b>, and I'm a full stack web developer from Melbourne, Australia."],
+            typespeed: 1,
             showCursor: false
         });
     });

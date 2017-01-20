@@ -12,7 +12,7 @@ body {
 body .container {
     color: white;
     font-size: 5em;
-    animation: HiAnimation 3s;
+    animation: HiAnimation 3s ease 0s 1 normal forwards;
 }
 
 .navbar-inverse {
@@ -30,16 +30,18 @@ body .container {
 
 .circle {
     border-radius: 50%;
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     background-color: white;
     opacity: 0;
-    animation: CircleAppear 2s ease 2.5s 1 normal forwards;
+    margin-bottom: 100px;
+    visibility: hidden;
+    animation: CircleAppear 2s ease 3.5s 1 normal forwards;
 }
 
 @keyframes CircleAppear {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
+    0% {opacity: 0; visibility: visible;}
+    100% {opacity: 1; visibility: visible;}
 }
 
 @-webkit-keyframes backgroundGradient {
@@ -83,7 +85,16 @@ body .container {
 }
 
 @keyframes HiAnimation {
-    0% { font-size: 40em; position: relative; top: -200px;}
-    80% { font-size: 40em; position: relative; top: -200px;}
-    100% { font-size: 5em; position: relative; top: 0px;}
+    0% { font-size: 40em; position: relative; top: -300px;}
+    80% { font-size: 40em; position: relative; top: -300px;}
+    100% { font-size: 2em; position: relative; top: 0px;}
+}
+
+hr {
+    display: block;
+    max-width: 50%;
+    margin-top: 100px;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid #E7E9ED;
 }
