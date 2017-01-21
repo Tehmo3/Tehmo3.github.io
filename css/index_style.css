@@ -8,7 +8,6 @@ body {
     animation: backgroundGradient 23s ease infinite;
     overflow-x: hidden;
 }
-
 body .container {
     color: white;
     opacity: 1;
@@ -16,33 +15,32 @@ body .container {
 
 body .animate {
         animation: HiAnimation 2s ease 0s 1 normal forwards;
-        margin-bottom: 75px;
+        margin-bottom: 150px;
 }
 .icon {
     height: 64px;
     border-radius: 5px;
 }
 
-.navbar-inverse {
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
+.icons {
+    height: 45px;
 }
-.navbar.center .navbar-inner {
-    text-align: center;
+
+.btn {
+    color: white;
 }
-.navbar.center .navbar-inner .nav {
-    float: none;
-    display:inline-block;
+.downbutton {
+    font-size: 6em;
 }
 
 .circle {
     border-radius: 50%;
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
+    margin-top: 50px;
     background-color: white;
     opacity: 0;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
     visibility: hidden;
     animation: CircleAppear 2s ease 3s 1 normal forwards;
 }
@@ -68,41 +66,27 @@ body .animate {
     100%{background-position:0% 50%}
 }
 
-.typed-cursor{
-    opacity: 1;
-    position: relative;
-    top: -5px;;
-    -webkit-animation: blink 0.7s infinite;
-    -moz-animation: blink 0.7s infinite;
-    animation: blink 0.7s infinite;
+.fadeIn {
+    opacity: 0;
+    animation: fadeIn 4s ease 6s 1 normal forwards;
 }
-@keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-@-webkit-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-@-moz-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+@keyframes fadeIn {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
 }
 
 @keyframes HiAnimation {
-    0% { font-size: 40em; position: relative; top: -300px; opacity: 0}
-    50% { font-size: 40em; position: relative; top: -300px; opacity: 1}
-    80% { font-size: 40em; position: relative; top: -300px; opacity: 1}
+    0% { font-size: 40em; position: relative; top: -600px; opacity: 0}
+    50% { font-size: 40em; position: relative; top: -600px; opacity: 1}
+    80% { font-size: 40em; position: relative; top: -600px; opacity: 1}
     100% { font-size: 2em; position: relative; top: 0px; opacity: 1}
 }
+
 
 hr {
     display: block;
     max-width: 50%;
-    margin-top: 75px;
+    margin-top: 5px;
     background-color: transparent;
     border: 0;
     border-bottom: 1px solid #E7E9ED;

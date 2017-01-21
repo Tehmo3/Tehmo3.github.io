@@ -13,25 +13,6 @@
         <script src="js/index.js"></script>
     </head>
     <body>
-        <nav class="navbar navbar-inverse center" role="navigation">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="navbar-inner collapse navbar-collapse" id="navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li><a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-tasks" aria-hidden="true"></span></a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-th" aria-hidden="true"></span></a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-education" aria-hidden="true"></span></a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a></li>
-                </ul>
-            </div>
-        </nav>
         <div class="animate">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2"><div class="circle center-block"></div></div>
@@ -42,28 +23,33 @@
                 </div>
             </div>
         </div>
-        <div class="row icons">
-            <div class="container col-md-1 col-md-offset-5 text-center">
-                <object type="image/svg+xml" data="images/mail.svg" class="icon">
-                    Your browser does not support SVG
-                </object>
+        <div class="fadeIn">
+        <div class="row">
+            <div class="container col-md-2 col-md-offset-5 text-center">
+                <button type="button" class="btn btn-link" onclick="scrollToSkills();"><span class="glyphicon glyphicon-menu-down downbutton" aria-hidden="true"></span></button>
+
             </div>
-            <div class="container col-md-1 text-center">
-                <object type="image/svg+xml" data="images/github.svg" class="icon">
-                    Your browser does not support SVG
-                </object>
-            </div>
-        </a>
         </div>
         <div class="row">
             <hr />
+        </div>
+        <div class="row portfolio">
+            <div class="col-md-12">
+                <img src="images/project1.jpg" width="100%" />
+            </div>
+            <div class="col-md-12">
+                <img src="images/project2.jpg" width="100%" />
+            </div>
+            <div class="col-md-12">
+                <img src="images/project3.jpg" width="100%" />
+            </div>
         </div>
         <div class="row">
             <div class="container col-md-8 col-md-offset-2 text-center">
                 <h1>Favourite Tools</h1>
             </div>
         </div>
-        <div class="row">
+        <div class="row skills">
             <div class="col-md-1 col-md-offset-2 text-center">
                 <object type="image/svg+xml" data="images/html.svg" class="icon">
                     Your browser does not support SVG
@@ -104,6 +90,7 @@
                     Your browser does not support SVG
                 </object>
             </div>
+        </div>
         </div>
     </body>
 </html>

@@ -17,4 +17,8 @@ function wait(ms){
   }
 }
 
+var scrollToSkills = function () {
+    $(window).scrollTo(".skills", 500);
+}
+
 $(document).ready(main);
