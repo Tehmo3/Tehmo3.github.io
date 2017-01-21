@@ -17,8 +17,8 @@ function wait(ms){
   }
 }
 
-var scrollToSkills = function () {
-    $(window).scrollTo(".skills", 500);
+var scrollToPortfolio = function () {
+    $(window).scrollTo(".portfolio", 500);
 }
 
 $(document).ready(main);

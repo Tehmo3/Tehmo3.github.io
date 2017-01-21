@@ -8,6 +8,7 @@ body {
     animation: backgroundGradient 23s ease infinite;
     overflow-x: hidden;
 }
+
 body .container {
     color: white;
     opacity: 1;
@@ -15,7 +16,7 @@ body .container {
 
 body .animate {
         animation: HiAnimation 2s ease 0s 1 normal forwards;
-        margin-bottom: 150px;
+        margin-bottom: 7%;
 }
 .icon {
     height: 64px;
@@ -76,10 +77,10 @@ body .animate {
 }
 
 @keyframes HiAnimation {
-    0% { font-size: 40em; position: relative; top: -600px; opacity: 0}
-    50% { font-size: 40em; position: relative; top: -600px; opacity: 1}
-    80% { font-size: 40em; position: relative; top: -600px; opacity: 1}
-    100% { font-size: 2em; position: relative; top: 0px; opacity: 1}
+    0% { font-size: 40em; position: relative; top: -600px; opacity: 0;}
+    50% { font-size: 40em; position: relative; top: -600px; opacity: 1;}
+    80% { font-size: 40em; position: relative; top: -600px; opacity: 1;}
+    100% { font-size: 2em; position: relative; top: 0px; opacity: 1;}
 }
 
 
