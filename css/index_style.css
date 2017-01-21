@@ -46,6 +46,21 @@ body .animate {
     animation: CircleAppear 2s ease 3s 1 normal forwards;
 }
 
+.inner {
+    width: 450px;
+    height: 450px;
+    position: relative;
+    top: 25px;
+    background-color: rgb(98, 98, 98)
+}
+
+.inner2 {
+    width: 425px;
+    height: 425px;
+    position: relative;
+    top: 12.5px;
+}
+
 @keyframes CircleAppear {
     0% {opacity: 0; visibility: visible;}
     100% {opacity: 1; visibility: visible;}
@@ -105,6 +120,17 @@ hr {
     transition: all 0.2s ease-in-out;
 }
 
+.second {
+    margin-top: 70px;
+}
+
+.header {
+    margin-bottom: 70px;
+    color: grey;
+}
+.skills {
+    margin-bottom: 70px;
+}
 .thumb .caption{
 	padding: 9px;
   	opacity:0;
