@@ -23,7 +23,7 @@ function wait(ms){
 }
 
 var scrollToPortfolio = function () {
-    $(window).scrollTo(".portfolio", 500);
+    $(window).scrollTo(".portfolio", 1000);
 }
 
 $(document).ready(main);
