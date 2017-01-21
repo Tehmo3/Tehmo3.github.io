@@ -166,3 +166,13 @@ hr {
         100% { font-size: 2em; position: relative; top: 0px; opacity: 1;}
     }
 }
+
+@media screen and (max-width: 700px) {
+    .thumb .caption .content h1 {
+        font-size: 16px;
+    }
+    .thumb .caption .content {
+        position: relative;
+        top: 0px;
+    }
+}
