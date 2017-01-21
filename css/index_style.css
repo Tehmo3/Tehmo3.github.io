@@ -160,6 +160,9 @@ hr {
         height: 225px;
     }
     @keyframes HiAnimation {
+        0% { font-size: 1000%; position: relative; top: -200px; opacity: 0;}
+        50% { font-size: 1000%; position: relative; top: -200px; opacity: 1;}
+        80% { font-size:1000%; position: relative; top: -200px; opacity: 1;}
         100% { font-size: 2em; position: relative; top: 0px; opacity: 1;}
     }
 }
