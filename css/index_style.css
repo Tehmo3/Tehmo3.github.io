@@ -1,11 +1,6 @@
 
 body {
-    background: linear-gradient(310deg, #290f0f, #1f2f42);
-    background-size: 400% 400%;
-    -webkit-animation: backgroundGradient 23s ease infinite;
-    -moz-animation: backgroundGradient 23s ease infinite;
-    -o-animation: backgroundGradient 23s ease infinite;
-    animation: backgroundGradient 23s ease infinite;
+    background: #FE5F55;
     overflow-x: hidden;
 }
 
@@ -33,6 +28,7 @@ body .animate {
 .downbutton {
     font-size: 6em;
 }
+
 
 .circle {
     border-radius: 50%;
@@ -65,23 +61,6 @@ body .animate {
     0% {opacity: 0; visibility: visible;}
     100% {opacity: 1; visibility: visible;}
 }
-
-@-webkit-keyframes backgroundGradient {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@-moz-keyframes backgroundGradient {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@keyframes backgroundGradient {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-
 .fadeIn {
     opacity: 0;
     animation: fadeIn 4s ease 6s 1 normal forwards;
@@ -92,9 +71,9 @@ body .animate {
 }
 
 @keyframes HiAnimation {
-    0% { font-size: 40em; position: relative; top: -600px; opacity: 0;}
-    50% { font-size: 40em; position: relative; top: -600px; opacity: 1;}
-    80% { font-size: 40em; position: relative; top: -600px; opacity: 1;}
+    0% { font-size: 1600%; position: relative; top: -400px; opacity: 0;}
+    50% { font-size: 1600%; position: relative; top: -400px; opacity: 1;}
+    80% { font-size:1600%; position: relative; top: -400px; opacity: 1;}
     100% { font-size: 2em; position: relative; top: 0px; opacity: 1;}
 }
 
@@ -163,4 +142,27 @@ hr {
 
 .second-container{
 	margin-top: 20px;
+}
+
+@media screen and (max-width: 500px) {
+    .circle {
+        width: 300px;
+        height: 300px;
+        margin-bottom: 50px;
+        margin-top: 25px;
+    }
+    .inner {
+        width: 250px;
+        height: 250px;
+    }
+    .inner2 {
+        width: 225px;
+        height: 225px;
+    }
+    @keyframes HiAnimation {
+        0% { font-size: 1400%; position: relative; top: -100px; opacity: 0;}
+        50% { font-size: 1400%; position: relative; top: -100px; opacity: 1;}
+        80% { font-size:1400%; position: relative; top: -100px; opacity: 1;}
+        100% { font-size: 2em; position: relative; top: 0px; opacity: 1;}
+    }
 }
