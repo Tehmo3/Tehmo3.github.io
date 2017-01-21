@@ -11,11 +11,16 @@ body {
 
 body .container {
     color: white;
-    font-size: 5em;
-    opacity: 0;
-    animation: HiAnimation 3s ease 0s 1 normal forwards;
+    opacity: 1;
 }
 
+body .animate {
+        animation: HiAnimation 2s ease 0s 1 normal forwards;
+}
+.icon {
+    height: 64px;
+    border-radius: 5px;
+}
 .navbar-inverse {
     max-width: 300px;
     margin-left: auto;
@@ -37,7 +42,7 @@ body .container {
     opacity: 0;
     margin-bottom: 100px;
     visibility: hidden;
-    animation: CircleAppear 2s ease 3.5s 1 normal forwards;
+    animation: CircleAppear 2s ease 3s 1 normal forwards;
 }
 
 @keyframes CircleAppear {
@@ -87,6 +92,7 @@ body .container {
 
 @keyframes HiAnimation {
     0% { font-size: 40em; position: relative; top: -300px; opacity: 0}
+    50% { font-size: 40em; position: relative; top: -300px; opacity: 1}
     80% { font-size: 40em; position: relative; top: -300px; opacity: 1}
     100% { font-size: 2em; position: relative; top: 0px; opacity: 1}
 }
