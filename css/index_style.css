@@ -7,7 +7,7 @@ body {
 
 body .animate {
         animation: HiAnimation 2s ease 0s 1 normal forwards;
-        margin-bottom: 7%;
+        margin-bottom: 3%;
 }
 .icon {
     height: 64px;
@@ -36,6 +36,14 @@ body .animate {
     margin-bottom: 100px;
     visibility: hidden;
     animation: CircleAppear 2s ease 3s 1 normal forwards;
+}
+
+.margin {
+    margin-bottom: 3%;
+}
+
+.margin a {
+    color: white;
 }
 
 .inner {
@@ -144,6 +152,14 @@ hr {
     display: none;
     opacity: 0;
     transition: opacity 1s;
+}
+
+#contactButton {
+    margin-bottom: 50px;
+}
+
+.sendMessage {
+    margin-bottom: 50px;
 }
 
 @media screen and (max-width: 500px) {
