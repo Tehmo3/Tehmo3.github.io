@@ -2,11 +2,7 @@
 body {
     background: #FE5F55;
     overflow-x: hidden;
-}
-
-body .container {
     color: white;
-    opacity: 1;
 }
 
 body .animate {
@@ -63,7 +59,7 @@ body .animate {
 }
 .fadeIn {
     opacity: 0;
-    animation: fadeIn 4s ease 6s 1 normal forwards;
+    animation: fadeIn 3s ease 6s 1 normal forwards;
 }
 @keyframes fadeIn {
     0% { opacity: 0;}
@@ -105,7 +101,7 @@ hr {
 
 .header {
     margin-bottom: 70px;
-    color: grey;
+    color: white;
 }
 .skills {
     margin-bottom: 70px;
@@ -142,6 +138,12 @@ hr {
 
 .second-container{
 	margin-top: 20px;
+}
+
+#contactForm {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s;
 }
 
 @media screen and (max-width: 500px) {

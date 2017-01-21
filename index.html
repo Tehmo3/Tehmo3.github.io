@@ -115,6 +115,52 @@
                 </object>
             </div>
         </div>
+        <div class="row">
+            <hr class="second" />
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <h1 class="text-center">Lets talk!</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h2>Shoot me a message and we can discuss your project (or anything!) </h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <button type="button" class="btn btn-default" onclick="showContactForm();" id="contactButton">Contact Me!</button>
+            </div>
+
+            </div>
+		<form role="form" id="contactForm" action="mailto:jasper.b.miles@gmail.com" method="post" class="contact-form">
+            <div class="row">
+                <div class="col-md-3 col-md-offset-3">
+                  	<div class="form-group">
+                        <input type="text" class="form-control" name="Name" autocomplete="off" id="Name" placeholder="Name">
+                  	</div>
+                </div>
+                <div class="col-md-3">
+                  	<div class="form-group">
+                        <input type="email" class="form-control" name="email" autocomplete="off" id="email" placeholder="E-mail">
+                  	</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                  	<div class="form-group center-block">
+                        <textarea class="form-control textarea" rows="3" name="Message" id="Message" placeholder="Message"></textarea>
+                  	</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                  <button type="submit" class="btn btn-primary pull-right">Send a message</button>
+                </div>
+            </div>
+        </form>
+        </div>
         </div>
     </body>
 </html>

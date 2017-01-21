@@ -7,12 +7,23 @@ var main = function () {
         });
     });
     $('.thumb').hover(function(){
-	$(this).find('.caption').css('opacity','1');
-}, function(){
-	$(this).find('.caption').css('opacity','0');
-});
+	       $(this).find('.caption').css('opacity','1');
+    }, function(){
+	       $(this).find('.caption').css('opacity','0');
+    });
+
+
+
 }
 
+var showContactForm = function () {
+    $("#contactButton").remove();
+    $("#contactForm").css("display", "inherit");
+    $(window).scrollTo("#contactForm", 1000);
+    $("#contactForm").animate({
+        opacity: 1
+    }, 100);
+}
 
 function wait(ms){
    var start = new Date().getTime();
