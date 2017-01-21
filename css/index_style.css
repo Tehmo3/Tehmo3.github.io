@@ -3,6 +3,7 @@ body {
     background: #FE5F55;
     overflow-x: hidden;
     color: white;
+    font-family: 'Signika', sans-serif;
 }
 
 body .animate {
@@ -156,6 +157,7 @@ hr {
 
 #contactButton {
     margin-bottom: 50px;
+    color: black;
 }
 
 .sendMessage {
