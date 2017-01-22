@@ -16,14 +16,7 @@ body .animate {
         animation: HiAnimation 2s ease 0s 1 normal forwards;
         margin-bottom: 3%;
 }
-.icon {
-    height: 64px;
-    border-radius: 5px;
-}
 
-.icons {
-    height: 45px;
-}
 
 .btn {
     color: white;
@@ -221,6 +214,7 @@ hr {
 
 /* The side navigation menu */
 .sidenav {
+    overflow-y: hidden;
     height: 100%; /* 100% Full-height */
     width: 0; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */

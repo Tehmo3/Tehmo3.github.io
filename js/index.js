@@ -20,12 +20,15 @@ var main = function () {
 
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
 function openNav() {
+    $("#body").css("overflow-y", "hidden");
     document.getElementById("mySidenav").style.width = "100%";
     document.getElementById("body").style.marginLeft = "100%";
 }
 
 /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
 function closeNav() {
+    $("#body").css("overflow-y", "auto");
+    $(window).scrollTo(".animate", 10);
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("body").style.marginLeft = "0";
 }
