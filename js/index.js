@@ -1,6 +1,6 @@
 var main = function () {
     $(window).scrollTo(".animate", 10);
-    $(window).on('scroll resize', check_if_in_view);
+    $(window).on('scroll resize touchmove', check_if_in_view);
     $(function() {
         $(".typeSpace").typed({
             strings: ["<p>Hey! ^2000 My name is <b>Jasper Miles</b>, and I'm a full stack web developer from Melbourne, Australia.</p>"],

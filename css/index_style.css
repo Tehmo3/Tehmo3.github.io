@@ -37,7 +37,7 @@ body .animate {
 }
 
 .animation_element.in-view.slide-right {
-    animation: slideRight 2s;
+    animation: slideRight 1s;
 }
 
 @keyframes slideRight {
@@ -46,7 +46,7 @@ body .animate {
 }
 
 .animation_element.in-view.slide-left {
-    animation: slideLeft 2s;
+    animation: slideLeft 1s;
 }
 
 @keyframes slideLeft {
