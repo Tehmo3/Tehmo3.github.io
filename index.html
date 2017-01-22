@@ -44,7 +44,7 @@
             <hr />
         </div>
         <div class="row portfolio">
-            <div class="col-md-12 thumb">
+            <div class="col-md-12 thumb animation_element slide-right">
                 <div class="caption text-center">
                     <div class="content">
                         <h1>Graphique</h1>
@@ -54,7 +54,7 @@
                 </div>
                 <img src="images/project1.jpg" width="100%" />
             </div>
-            <div class="col-md-12 thumb">
+            <div class="col-md-12 thumb animation_element slide-left">
                 <div class="caption text-center">
                     <div class="content">
                         <h1>Placeholder</h1>
@@ -64,7 +64,7 @@
                 </div>
                 <img src="images/project2.jpg" width="100%" />
             </div>
-            <div class="col-md-12 thumb">
+            <div class="col-md-12 thumb animation_element slide-right">
                 <div class="caption text-center">
                     <div class="content">
                         <h1>Placeholder</h1>
@@ -75,100 +75,48 @@
                 <img src="images/project3.jpg" width="100%" />
             </div>
         </div>
-        <div class="row">
-            <hr class="second" />
-        </div>
-        <div class="row header">
-            <div class="container col-md-8 col-md-offset-2 text-center">
-                <h2>Some things I have learnt</h2>
-            </div>
-        </div>
-        <div class="row skills">
-            <div class="col-md-1 col-md-offset-2 col-xs-3 text-center">
-                <object type="image/svg+xml" data="images/html.svg" class="icon">
-                    Your browser does not support SVG
-                </object>
-            </div>
-            <div class="col-md-1 col-xs-3 text-center">
-                <object type="image/svg+xml" data="images/css.svg" class="icon" data-toggle="tooltip" data-placement="bottom" title="test">
-                    Your browser does not support SVG
-                </object>
-            </div>
-            <div class="col-md-1 col-xs-3 text-center">
-                <object type="image/svg+xml" data="images/javascript.svg" class="icon">
-                    Your browser does not support SVG
-                </object>
-            </div>
-            <div class="col-md-1 col-xs-3 text-center">
-                <object type="image/svg+xml" data="images/nodejs.svg" class="icon">
-                    Your browser does not support SVG
-                </object>
-            </div>
-            <div class="col-md-1 col-xs-3 text-center">
-                <object type="image/svg+xml" data="images/react.svg" class="icon">
-                    Your browser does not support SVG
-                </object>
-            </div>
-            <div class="col-md-1 col-xs-3 text-center">
-                <object type="image/svg+xml" data="images/sass.svg" class="icon">
-                    Your browser does not support SVG
-                </object>
-            </div>
-            <div class="col-md-1 col-xs-3 text-center">
-                <object type="image/svg+xml" data="images/github2.svg" class="icon">
-                    Your browser does not support SVG
-                </object>
-            </div>
-            <div class="col-md-1 col-xs-3 text-center">
-                <object type="image/svg+xml" data="images/bootstrap.svg" class="icon">
-                    Your browser does not support SVG
-                </object>
-            </div>
-        </div>
-        <div class="row">
-            <hr class="second" />
-        </div>
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <h1 class="text-center">Lets talk!</h1>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-                <h2 class="text-center">Shoot me a message and we can discuss your project (or anything!) </h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <button type="button" class="btn btn-default" onclick="showContactForm();" id="contactButton">Contact Me!</button>
-            </div>
-            </div>
-		<form role="form" id="contactForm" action="mailto:jasper.b.miles@gmail.com" method="post" class="contact-form">
+        <div class="newback">
             <div class="row">
-                <div class="col-md-3 col-md-offset-3">
-                  	<div class="form-group">
-                        <input type="text" class="form-control" name="Name" autocomplete="off" id="Name" placeholder="Name">
-                  	</div>
-                </div>
-                <div class="col-md-3">
-                  	<div class="form-group">
-                        <input type="email" class="form-control" name="email" autocomplete="off" id="email" placeholder="E-mail">
-                  	</div>
+                <div class="col-md-10 col-md-offset-1">
+                    <h1 class="text-center">Lets talk!</h1>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
-                  	<div class="form-group center-block">
-                        <textarea class="form-control textarea" rows="3" name="Message" id="Message" placeholder="Message"></textarea>
-                  	</div>
+                    <h2 class="text-center">Shoot me a message and we can discuss your project (or anything!) </h2>
                 </div>
             </div>
-            <div class="row sendMessage">
-                <div class="col-md-6 col-md-offset-3">
-                  <button type="submit" class="btn btn-primary pull-right">Send a message</button>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <button type="button" class="btn btn-default" onclick="showContactForm();" id="contactButton">Contact Me!</button>
                 </div>
-            </div>
-        </form>
+                </div>
+    		<form role="form" id="contactForm" action="mailto:jasper.b.miles@gmail.com" method="post" class="contact-form">
+                <div class="row">
+                    <div class="col-md-3 col-md-offset-3">
+                      	<div class="form-group">
+                            <input type="text" class="form-control" name="Name" autocomplete="off" id="Name" placeholder="Name">
+                      	</div>
+                    </div>
+                    <div class="col-md-3">
+                      	<div class="form-group">
+                            <input type="email" class="form-control" name="email" autocomplete="off" id="email" placeholder="E-mail">
+                      	</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                      	<div class="form-group center-block">
+                            <textarea class="form-control textarea" rows="3" name="Message" id="Message" placeholder="Message"></textarea>
+                      	</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                      <button type="submit" class="btn btn-primary pull-right">Send a message</button>
+                    </div>
+                </div>
+            </form>
         </div>
         </div>
     </body>

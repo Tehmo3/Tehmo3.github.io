@@ -31,6 +31,33 @@ body .animate {
     font-size: 6em;
 }
 
+.newback {
+    background-color: #18B155;
+    padding-bottom: 50px;
+}
+
+.animation_element.in-view.slide-right {
+    animation: slideRight 2s;
+}
+
+@keyframes slideRight {
+    0% {position: relative; left: -1000px;}
+    100% {position: relative; left: 0px;}
+}
+
+.animation_element.in-view.slide-left {
+    animation: slideLeft 2s;
+}
+
+@keyframes slideLeft {
+    0% {position: relative; right: -1000px;}
+    100% {position: relative; right: 0px;}
+}
+
+.btn-link:focus {
+    color: rgb(98, 98, 98);
+    outline: none;
+}
 
 .circle {
     border-radius: 50%;
@@ -170,10 +197,6 @@ hr {
 #contactButton {
     margin-bottom: 50px;
     color: black;
-}
-
-.sendMessage {
-    margin-bottom: 50px;
 }
 
 @media screen and (max-width: 500px) {
