@@ -21,6 +21,11 @@ body .animate {
 
 .btn {
     color: white;
+    transition: color 0.2s;
+}
+
+.btn-link:hover {
+    color:  rgb(98, 98, 98);
 }
 .downbutton {
     font-size: 6em;
@@ -45,14 +50,21 @@ body .animate {
 
 .margin a {
     color: white;
+    transition: color 0.2s;
 }
+
+.margin a:hover {
+    color:  rgb(98, 98, 98);
+}
+
+
 
 .inner {
     width: 450px;
     height: 450px;
     position: relative;
     top: 25px;
-    background-color: rgb(98, 98, 98)
+    background-color: rgb(98, 98, 98);
 }
 
 .inner2 {
