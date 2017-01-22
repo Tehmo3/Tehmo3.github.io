@@ -14,10 +14,10 @@
         <script src="js/jquery.scrollTo/jquery.scrollTo.min.js"></script>
         <script src="js/index.js"></script>
     </head>
-    <body>
+    <body id="body">
         <div class="animate">
             <div class="row">
-                <div class="col-md-8 col-md-offset-2"><div class="circle center-block"><div class="circle inner center-block"><img src="images/me.jpg" class="circle inner2 center-block"/></div></div></div>
+                <div class="col-md-8 col-md-offset-2"><div class="circle center-block cursorChange" onclick="openNav()"><div class="circle inner center-block"><img src="images/me.jpg" class="circle inner2 center-block"/></div></div></div>
             </div>
             <div class="row">
                 <div class="container col-md-8 col-md-offset-2">
@@ -120,4 +120,11 @@
         </div>
         </div>
     </body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Back</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
 </html>

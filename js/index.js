@@ -3,7 +3,7 @@ var main = function () {
     $(window).on('scroll resize touchmove', check_if_in_view);
     $(function() {
         $(".typeSpace").typed({
-            strings: ["<p>Hey! ^2000 My name is <b>Jasper Miles</b>, and I'm a full stack web developer from Melbourne, Australia.</p>"],
+            strings: ["<span onclick=openNav() class=cursorChange><p>Hey! ^2000 My name is <b>Jasper Miles</b>, and I'm a full stack web developer from Melbourne, Australia.</p></span>"],
             typespeed: 1,
             showCursor: false
         });
@@ -16,6 +16,18 @@ var main = function () {
 
 
 
+}
+
+/* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+function openNav() {
+    document.getElementById("mySidenav").style.width = "100%";
+    document.getElementById("body").style.marginLeft = "100%";
+}
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("body").style.marginLeft = "0";
 }
 
 var showContactForm = function () {
