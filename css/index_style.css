@@ -37,21 +37,25 @@ body .animate {
 }
 
 .animation_element.in-view.slide-right {
-    animation: slideRight 1s;
+    opacity: 0;
+    animation: slideRight 1s ease 0s 1 normal forwards;
 }
 
 @keyframes slideRight {
-    0% {position: relative; left: -1000px;}
-    100% {position: relative; left: 0px;}
+    0% {position: relative; left: -1000px; opacity: 0}
+    1% {position: relative; left: -1000px; opacity: 1;}
+    100% {position: relative; left: 0px; opacity: 1;}
 }
 
 .animation_element.in-view.slide-left {
-    animation: slideLeft 1s;
+    opacity: 0;
+    animation: slideLeft 1s ease 0s 1 normal forwards;
 }
 
 @keyframes slideLeft {
-    0% {position: relative; right: -1000px;}
-    100% {position: relative; right: 0px;}
+    0% {position: relative; right: -1000px; opacity: 0;}
+    1% {position: relative; right: -1000px; opacity: 1;}
+    100% {position: relative; right: 0px; opacity: 1;}
 }
 
 .btn-link:focus {
