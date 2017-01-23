@@ -61,17 +61,6 @@ body .animate {
     color: rgb(98, 98, 98);
     outline: none;
 }
-
-.leftButtonDiv {
-    height: 650px;
-    margin-left: 10px;
-}
-
-.leftButton {
-    font-size: 6em;
-    margin-top: 250px;
-}
-
 .circle {
     border-radius: 50%;
     width: 500px;
