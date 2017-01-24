@@ -24,10 +24,14 @@ body .animate {
 
 .leftButtonDiv {
     height: 650px;
-    margin-left: 10px;
 }
 
 .leftButton {
+    font-size: 6em;
+    margin-top: 250px;
+}
+
+.rightButton {
     font-size: 6em;
     margin-top: 250px;
 }
@@ -45,32 +49,7 @@ body .animate {
     padding-bottom: 50px;
 }
 
-.animation_element {
-    padding-left: 0px;
-    padding-right: 0px;
-}
 
-.animation_element.in-view.slide-right {
-    opacity: 0;
-    animation: slideRight 1s ease 0s 1 normal forwards;
-}
-
-@keyframes slideRight {
-    0% {position: relative; left: -1000px; opacity: 0}
-    1% {position: relative; left: -1000px; opacity: 1;}
-    100% {position: relative; left: 0px; opacity: 1;}
-}
-
-.animation_element.in-view.slide-left {
-    opacity: 0;
-    animation: slideLeft 1s ease 0s 1 normal forwards;
-}
-
-@keyframes slideLeft {
-    0% {position: relative; right: -1000px; opacity: 0;}
-    1% {position: relative; right: -1000px; opacity: 1;}
-    100% {position: relative; right: 0px; opacity: 1;}
-}
 
 .btn-link:focus {
     color: rgb(98, 98, 98);
@@ -89,7 +68,7 @@ body .animate {
 }
 
 .margin {
-    margin-bottom: 1.8%;
+    margin-bottom: 2.3%;
 }
 
 .margin a {
@@ -143,19 +122,13 @@ body .animate {
     margin-right: 0;
 }
 
-hr {
-    display: block;
-    max-width: 50%;
-    margin-top: 5px;
-    background-color: transparent;
-    border: 0;
-    border-bottom: 1px solid #E7E9ED;
-    margin-bottom: 70px;
-}
+
 .thumb{
     background:#E6E6E6;
   	position: relative;
 	overflow: hidden;
+    padding-right: 0;
+    padding-left: 0;
 	display: block;
     line-height: 20px;
     -webkit-transition: all 0.2s ease-in-out;
@@ -221,7 +194,7 @@ hr {
 }
 
 /* The side navigation menu */
-.sidenav {
+.leftSidenav {
     overflow-y: hidden;
     height: 100%; /* 100% Full-height */
     width: 0; /* 0 width - change this with JavaScript */
@@ -235,7 +208,7 @@ hr {
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
-.sidenav a {
+.leftSidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
@@ -244,7 +217,7 @@ hr {
     transition: 0.3s
 }
 
-.sidenav .closebtn {
+.leftSidenav .closebtn {
     position: absolute;
     top: 0;
     right: 25px;
@@ -259,10 +232,83 @@ hr {
 .cursorChange:hover {
     cursor: pointer;
 }
+
+.rightSidenav {
+    overflow-y: hidden;
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    right: 0;
+    background-color: #307ECB;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.rightSidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.rightSidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+
+
+#body {
+    transition: margin-left .5s;
+}
+
+.bottomNav {
+    height: 0; /* 100% Full-height */
+    width: 100%; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    bottom: 0;
+    background-color: #307ECB;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.bottomNav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.bottomNav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.cursorChange:hover {
+    cursor: pointer;
+}
+
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+    .leftSidenav {padding-top: 15px;}
+    .leftSidenav a {font-size: 18px;}
+    .rightSidenav {padding-top: 15px;}
+    .rightSidenav a {font-size: 18px;}
+    .bottomNav {padding-top: 15px;}
+    .bottomNav a {font-size: 18px;}
 }
 
 @media screen and (max-width: 500px) {

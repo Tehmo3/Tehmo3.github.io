@@ -1,10 +1,11 @@
 var main = function () {
+    var open = "main"
     $(window).scrollTo(".animate", 10);
     $(window).on('scroll resize touchmove', check_if_in_view);
 
     $(function() {
         $(".typeSpace").typed({
-            strings: ["<span onclick=openNav() class=cursorChange><p>Hey! ^2000 My name is <b>Jasper Miles</b>, and I'm a full stack web developer from Melbourne, Australia.</p></span>"],
+            strings: ["<p>Hey! ^2000 My name is <b>Jasper Miles</b>, and I'm a full stack web developer from Melbourne, Australia.</p>"],
             typespeed: 1,
             showCursor: false
         });
@@ -16,10 +17,30 @@ var main = function () {
 	       $(this).find('.caption').css('opacity','0');
     });
 
-    $(window).keypress(function (e) {
-        if (e.which === 37) {
+    $(window).keydown(function (e) {
+        if (e.which === 37 && open === "main") {
+            openLeftNav();
+            open = "left"
         }
-        if (e.which === 39) {
+        if (e.which === 39 && open === "left") {
+            closeLeftNav();
+            open = "main"
+        }
+        if (e.which === 39 && open === "main") {
+            openRightNav();
+            open = "right"
+        }
+        if (e.which === 37 && open === "right") {
+            closeRightNav();
+            open = "main"
+        }
+        if (e.which === 40 && open === "main") {
+            openBottomNav();
+            open = "bottom"
+        }
+        if (e.which === 38 && open === "bottom") {
+            closeBottomNav();
+            open = "main"
         }
     })
 
@@ -27,19 +48,45 @@ var main = function () {
 }
 
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
-function openNav() {
-    $("#body").css("overflow-y", "hidden");
-    document.getElementById("mySidenav").style.width = "100%";
+function openLeftNav() {
+    document.getElementById("leftSidenav").style.width = "100%";
     document.getElementById("body").style.marginLeft = "100%";
     return true;
 }
 
 /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
-function closeNav() {
-    $("#body").css("overflow-y", "auto");
+function closeLeftNav() {
     $(window).scrollTo(".animate", 10);
-    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("leftSidenav").style.width = "0";
     document.getElementById("body").style.marginLeft = "0";
+    return false;
+}
+
+function openRightNav() {
+    document.getElementById("rightSidenav").style.width = "100%";
+    document.getElementById("body").style.marginright = "100%";
+    return true;
+}
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+function closeRightNav() {
+    $(window).scrollTo(".animate", 10);
+    document.getElementById("rightSidenav").style.width = "0";
+    document.getElementById("body").style.marginright = "0";
+    return false;
+}
+
+function openBottomNav() {
+    document.getElementById("bottomNav").style.height = "100%";
+    document.getElementById("body").style.marginbottom = "100%";
+    return true;
+}
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+function closeBottomNav() {
+    $(window).scrollTo(".animate", 10);
+    document.getElementById("bottomNav").style.height = "0";
+    document.getElementById("body").style.marginbottom = "0";
     return false;
 }
 

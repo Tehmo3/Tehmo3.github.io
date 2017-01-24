@@ -17,16 +17,21 @@
     <body id="body">
         <div class="animate">
             <div class="row">
-                <div class="col-md-1 hidden-xs leftButtonDiv fadeIn">
+                <div class="col-md-1 hidden-xs hidden-sm leftButtonDiv fadeIn">
                     <div id="margin">
-                        <button type="button" class="btn btn-link" onclick="openNav();"><span class="glyphicon glyphicon-menu-left leftButton" aria-hidden="true"></span></button>
+                        <button type="button" class="btn btn-link" onclick="openLeftNav();"><span class="glyphicon glyphicon-menu-left leftButton" aria-hidden="true"></span></button>
                     </div>
                 </div>
                 <div class="col-md-4 col-md-offset-3">
-                    <div class="circle center-block cursorChange" onclick="openNav()">
+                    <div class="circle center-block cursorChange" onclick="openLeftNav()">
                         <div class="circle inner center-block">
                             <img src="images/me.jpg" class="circle inner2 center-block"/>
                         </div>
+                    </div>
+                </div>
+                <div class="col-md-1 hidden-xs hidden-sm rightButtonDiv col-md-offset-3 fadeIn">
+                    <div id="margin">
+                        <button type="button" class="btn btn-link" onclick="openRightNav();"><span class="glyphicon glyphicon-menu-right rightButton" aria-hidden="true"></span></button>
                     </div>
                 </div>
             </div>
@@ -47,15 +52,28 @@
         </div>
         <div class="row">
             <div class="container col-md-2 col-md-offset-5 text-center">
-                <button type="button" class="btn btn-link" onclick="scrollToPortfolio();"><span class="glyphicon glyphicon-menu-down downbutton" aria-hidden="true"></span></button>
-
+                <button type="button" class="btn btn-link" onclick="openBottomNav();"><span class="glyphicon glyphicon-menu-down downbutton" aria-hidden="true"></span></button>
             </div>
         </div>
-        <div class="row">
-            <hr />
         </div>
+    </body>
+    <div id="leftSidenav" class="leftSidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeLeftNav()">Back</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+    <div id="rightSidenav" class="rightSidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeRightNav()">Back</a>
+        <a href="#">test</a>
+        <a href="#">test</a>
+        <a href="#">test</a>
+        <a href="#">test</a>
+    </div>
+    <div id="bottomNav" class="bottomNav">
         <div class="row portfolio">
-            <div class="col-md-12 thumb animation_element slide-right">
+            <div class="col-md-12 thumb">
                 <div class="caption text-center">
                     <div class="content">
                         <h1>Graphique</h1>
@@ -65,7 +83,7 @@
                 </div>
                 <img src="images/project1.jpg" width="100%" />
             </div>
-            <div class="col-md-12 thumb animation_element slide-left">
+            <div class="col-md-12 thumb">
                 <div class="caption text-center">
                     <div class="content">
                         <h1>Placeholder</h1>
@@ -75,7 +93,7 @@
                 </div>
                 <img src="images/project2.jpg" width="100%" />
             </div>
-            <div class="col-md-12 thumb animation_element slide-right">
+            <div class="col-md-12 thumb">
                 <div class="caption text-center">
                     <div class="content">
                         <h1>Placeholder</h1>
@@ -102,24 +120,24 @@
                     <button type="button" class="btn btn-default" onclick="showContactForm();" id="contactButton">Contact Me!</button>
                 </div>
                 </div>
-    		<form role="form" id="contactForm" action="mailto:hello@jaspermiles.me" method="post" class="contact-form">
+            <form role="form" id="contactForm" action="mailto:hello@jaspermiles.me" method="post" class="contact-form">
                 <div class="row">
                     <div class="col-md-3 col-md-offset-3">
-                      	<div class="form-group">
+                        <div class="form-group">
                             <input type="text" class="form-control" name="Name" autocomplete="off" id="Name" placeholder="Name">
-                      	</div>
+                        </div>
                     </div>
                     <div class="col-md-3">
-                      	<div class="form-group">
+                        <div class="form-group">
                             <input type="email" class="form-control" name="email" autocomplete="off" id="email" placeholder="E-mail">
-                      	</div>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3">
-                      	<div class="form-group center-block">
+                        <div class="form-group center-block">
                             <textarea class="form-control textarea" rows="3" name="Message" id="Message" placeholder="Message"></textarea>
-                      	</div>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
@@ -129,13 +147,5 @@
                 </div>
             </form>
         </div>
-        </div>
-    </body>
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Back</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
     </div>
 </html>
