@@ -71,7 +71,6 @@ var onPress = function (key, lastKey) {
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
 function openLeftNav() {
     document.getElementById("leftSidenav").style.width = "100%";
-    document.getElementById("body").style.marginLeft = "100%";
     return "left";
 }
 
@@ -79,13 +78,11 @@ function openLeftNav() {
 function closeLeftNav() {
     $(window).scrollTo(".animate", 10);
     document.getElementById("leftSidenav").style.width = "0";
-    document.getElementById("body").style.marginLeft = "0";
     return "main";
 }
 
 function openRightNav() {
     document.getElementById("rightSidenav").style.width = "100%";
-    document.getElementById("body").style.marginright = "100%";
     return "right";
 }
 
@@ -93,13 +90,11 @@ function openRightNav() {
 function closeRightNav() {
     $(window).scrollTo(".animate", 10);
     document.getElementById("rightSidenav").style.width = "0";
-    document.getElementById("body").style.marginright = "0";
     return "main";
 }
 
 function openBottomNav() {
     document.getElementById("bottomNav").style.height = "100%";
-    document.getElementById("body").style.marginbottom = "100%";
     return "bottom";
 }
 
@@ -107,7 +102,6 @@ function openBottomNav() {
 function closeBottomNav() {
     $(window).scrollTo(".animate", 10);
     document.getElementById("bottomNav").style.height = "0";
-    document.getElementById("body").style.marginbottom = "0";
     return "main";
 }
 
