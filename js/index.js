@@ -1,6 +1,7 @@
 var main = function () {
     $(window).scrollTo(".animate", 10);
     $(window).on('scroll resize touchmove', check_if_in_view);
+
     $(function() {
         $(".typeSpace").typed({
             strings: ["<span onclick=openNav() class=cursorChange><p>Hey! ^2000 My name is <b>Jasper Miles</b>, and I'm a full stack web developer from Melbourne, Australia.</p></span>"],
@@ -8,13 +9,27 @@ var main = function () {
             showCursor: false
         });
     });
+
     $('.thumb').hover(function(){
 	       $(this).find('.caption').css('opacity','1');
     }, function(){
 	       $(this).find('.caption').css('opacity','0');
     });
 
+    $(window).keypress(function (e) {
+        if (e.which === 37) {
+        }
+        if (e.which === 39) {
+        }
+    })
 
+    $(window).on("swiperight", function(e) {
+        openNav();
+    })
+
+    $(window).on("swipeleft", function(e) {
+        closeNav();
+    })
 
 }
 
@@ -23,6 +38,7 @@ function openNav() {
     $("#body").css("overflow-y", "hidden");
     document.getElementById("mySidenav").style.width = "100%";
     document.getElementById("body").style.marginLeft = "100%";
+    return true;
 }
 
 /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
@@ -31,6 +47,7 @@ function closeNav() {
     $(window).scrollTo(".animate", 10);
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("body").style.marginLeft = "0";
+    return false;
 }
 
 var showContactForm = function () {
