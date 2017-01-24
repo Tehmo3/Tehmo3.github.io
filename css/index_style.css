@@ -26,6 +26,21 @@ body .animate {
     height: 650px;
 }
 
+.buttonText {
+    margin-top: 263px;
+}
+#leftText {
+    position: relative;
+    left: -50%;
+}
+#rightText {
+    position: relative;
+    right: -20%;
+}
+#bottomText {
+    position: relative;
+    bottom: -1em;
+}
 .leftButton {
     font-size: 6em;
     margin-top: 250px;
@@ -43,12 +58,6 @@ body .animate {
 .downbutton {
     font-size: 6em;
 }
-
-.newback {
-    background-color: #18B155;
-    padding-bottom: 50px;
-}
-
 
 
 .btn-link:focus {
