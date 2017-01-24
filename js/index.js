@@ -22,23 +22,23 @@ var main = function () {
             openLeftNav();
             open = "left"
         }
-        if (e.which === 39 && open === "left") {
+        else if (e.which === 39 && open === "left") {
             closeLeftNav();
             open = "main"
         }
-        if (e.which === 39 && open === "main") {
+        else if (e.which === 39 && open === "main") {
             openRightNav();
             open = "right"
         }
-        if (e.which === 37 && open === "right") {
+        else if (e.which === 37 && open === "right") {
             closeRightNav();
             open = "main"
         }
-        if (e.which === 40 && open === "main") {
+        else if (e.which === 40 && open === "main") {
             openBottomNav();
             open = "bottom"
         }
-        if (e.which === 38 && open === "bottom") {
+        else if (e.which === 38 && open === "bottom") {
             closeBottomNav();
             open = "main"
         }
