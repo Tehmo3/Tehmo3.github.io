@@ -1,3 +1,4 @@
+
 var open = "main"; //Easier to make global than use jquery... lazy programming :)
 
 var main = function () {
@@ -21,24 +22,24 @@ var main = function () {
     $(window).keydown(function (e) {
         open = onPress(e.which, open)
     })
-    $(window).on("swiperight", function () {
-        console.log("swiperight")
-        open = onPress(37, open)
-    })
-    $(window).on("swipeleft", function () {
-        console.log("swiperight")
-        open = onPress(39, open)
-    })
-    $(window).on("swipeup", function () {
-        console.log("swiperight")
-        open = onPress(40, open)
-    })
-    $(window).on("swipedown", function () {
-        console.log("swiperight")
-        open = onPress(38, open)
-    })
+    $(window).swipe( {
+        swipeUp:function(event, direction, distance, duration) {
+            simulatePress(40);
+        },
+        swipeDown:function(event, direction, distance, duration) {
+            simulatePress(38);
+        },
+        swipeLeft:function(event, direction, distance, duration) {
+            simulatePress(39);
+        },
+        swipeRight:function(event, direction, distance, duration) {
+            simulatePress(37);
+        },
+        threshold:100,
+        allowPageScroll:"vertical"
+    });
 
-}
+};
 
 function simulatePress(key) {
     console.log(key, open);
@@ -151,5 +152,6 @@ function check_if_in_view() {
 var scrollToPortfolio = function () {
     $(window).scrollTo(".portfolio", 1000);
 }
+
 
 $(document).ready(main);
