@@ -21,19 +21,19 @@ var main = function () {
     $(window).keydown(function (e) {
         open = onPress(e.which, open)
     })
-    $(".circle").on("swiperight", function () {
+    $(window).on("swiperight", function () {
         console.log("swiperight")
         open = onPress(37, open)
     })
-    $(".circle").on("swipeleft", function () {
+    $(window).on("swipeleft", function () {
         console.log("swiperight")
         open = onPress(39, open)
     })
-    $(".circle").on("swipeup", function () {
+    $(window).on("swipeup", function () {
         console.log("swiperight")
         open = onPress(40, open)
     })
-    $(".circle").on("swipedown", function () {
+    $(window).on("swipedown", function () {
         console.log("swiperight")
         open = onPress(38, open)
     })
