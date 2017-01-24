@@ -23,11 +23,11 @@ var main = function () {
         }
     })
 
-    $(window).on("swiperight", function(e) {
+    $("body").on("swiperight", function(e) {
         openNav();
     })
 
-    $(window).on("swipeleft", function(e) {
+    $("body").on("swipeleft", function(e) {
         closeNav();
     })
 
