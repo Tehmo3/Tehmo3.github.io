@@ -23,13 +23,6 @@ var main = function () {
         }
     })
 
-    $(document).on("swiperight", "body", function(e) {
-        openNav();
-    })
-
-    $(document).on("swipeleft", "body", function(e) {
-        closeNav();
-    })
 
 }
 
