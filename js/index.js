@@ -1,5 +1,6 @@
+var open = "main"; //Easier to make global than use jquery... lazy programming :)
+
 var main = function () {
-    var open = "main"
     $(window).scrollTo(".animate", 10);
     $(window).on('scroll resize touchmove', check_if_in_view);
 
@@ -18,40 +19,43 @@ var main = function () {
     });
 
     $(window).keydown(function (e) {
-        if (e.which === 37 && open === "main") {
-            openLeftNav();
-            open = "left"
-        }
-        else if (e.which === 39 && open === "left") {
-            closeLeftNav();
-            open = "main"
-        }
-        else if (e.which === 39 && open === "main") {
-            openRightNav();
-            open = "right"
-        }
-        else if (e.which === 37 && open === "right") {
-            closeRightNav();
-            open = "main"
-        }
-        else if (e.which === 40 && open === "main") {
-            openBottomNav();
-            open = "bottom"
-        }
-        else if (e.which === 38 && open === "bottom") {
-            closeBottomNav();
-            open = "main"
-        }
+        open = onPress(e.which, open)
     })
 
-
 }
+
+function simulatePress(key) {
+    console.log(key, open);
+    open = onPress(key, open);
+}
+
+var onPress = function (key, lastKey) {
+    if (key === 37 && lastKey === "main") {
+        lastKey = openLeftNav();
+    }
+    else if (key === 39 && lastKey === "left") {
+        lastKey = closeLeftNav();
+    }
+    else if (key === 39 && lastKey === "main") {
+        lastKey = openRightNav();
+    }
+    else if (key === 37 && lastKey === "right") {
+        lastKey = closeRightNav();
+    }
+    else if (key === 40 && lastKey === "main") {
+        lastKey = openBottomNav();
+    }
+    else if (key === 38 && lastKey === "bottom") {
+        lastKey = closeBottomNav();
+    }
+    return lastKey;
+};
 
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
 function openLeftNav() {
     document.getElementById("leftSidenav").style.width = "100%";
     document.getElementById("body").style.marginLeft = "100%";
-    return true;
+    return "left";
 }
 
 /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
@@ -59,13 +63,13 @@ function closeLeftNav() {
     $(window).scrollTo(".animate", 10);
     document.getElementById("leftSidenav").style.width = "0";
     document.getElementById("body").style.marginLeft = "0";
-    return false;
+    return "main";
 }
 
 function openRightNav() {
     document.getElementById("rightSidenav").style.width = "100%";
     document.getElementById("body").style.marginright = "100%";
-    return true;
+    return "right";
 }
 
 /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
@@ -73,13 +77,13 @@ function closeRightNav() {
     $(window).scrollTo(".animate", 10);
     document.getElementById("rightSidenav").style.width = "0";
     document.getElementById("body").style.marginright = "0";
-    return false;
+    return "main";
 }
 
 function openBottomNav() {
     document.getElementById("bottomNav").style.height = "100%";
     document.getElementById("body").style.marginbottom = "100%";
-    return true;
+    return "bottom";
 }
 
 /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
@@ -87,7 +91,7 @@ function closeBottomNav() {
     $(window).scrollTo(".animate", 10);
     document.getElementById("bottomNav").style.height = "0";
     document.getElementById("body").style.marginbottom = "0";
-    return false;
+    return "main";
 }
 
 var showContactForm = function () {
