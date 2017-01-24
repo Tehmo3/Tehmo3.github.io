@@ -16,22 +16,22 @@ var main = function () {
 	       $(this).find('.caption').css('opacity','0');
     });
 
+    $(window).keypress(function (e) {
+        if (e.which === 37) {
+        }
+        if (e.which === 39) {
+        }
+    })
+
+    $("body").on("swiperight", function(e) {
+        openNav();
+    })
+
+    $("body").on("swipeleft", function(e) {
+        closeNav();
+    })
+
 }
-
-$(window).keypress(function (e) {
-    if (e.which === 37) {
-    }
-    if (e.which === 39) {
-    }
-})
-
-$("body").on("swiperight", function(e) {
-    openNav();
-})
-
-$("body").on("swipeleft", function(e) {
-    closeNav();
-})
 
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
 function openNav() {
