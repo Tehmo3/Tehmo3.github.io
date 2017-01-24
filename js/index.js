@@ -36,6 +36,7 @@ var main = function () {
             simulatePress(37);
         },
         threshold:100,
+        allowPageScroll:"vertical"
     });
 
 };
