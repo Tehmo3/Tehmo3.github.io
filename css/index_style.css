@@ -325,6 +325,11 @@ body .animate {
 .bottomNav h3 {
     margin-right: 55px;
     margin-left: 55px;
+    font-size: 158%;
+}
+
+.centerImage {
+    margin: 0 auto;
 }
 
 .bottomNav a {
