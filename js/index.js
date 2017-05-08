@@ -1,5 +1,4 @@
 
-var open = "main"; //Easier to make global than use jquery... lazy programming :)
 
 var main = function () {
     $(window).scrollTo(".animate", 1000);
