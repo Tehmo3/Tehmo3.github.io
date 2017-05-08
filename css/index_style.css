@@ -363,7 +363,7 @@ body .animate {
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
     .bottomNav {
         height: 0; /* 100% Full-height */
         width: 100%; /* 0 width - change this with JavaScript */
@@ -463,6 +463,9 @@ body .animate {
     }
     .rightSidenav button {
         visibility: visible;
+    }
+    .fadeIn {
+        margin-top: 0;
     }
 }
 @media screen and (max-height: 450px) {
