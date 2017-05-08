@@ -3,7 +3,6 @@ body {
     background: #FE5F55;
     color: white;
     font-family: 'Signika', sans-serif;
-    overflow-y: hidden;
     animation: lockScroll 0.1s ease 6s 1 normal forwards;
 }
 
@@ -24,6 +23,7 @@ body .animate {
 
 .leftButtonDiv {
     height: 650px;
+    visibility: hidden;
 }
 
 .buttonText {
@@ -235,8 +235,8 @@ body .animate {
 /* The side navigation menu */
 .leftSidenav {
     height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
+    width: 100%; /* 0 width - change this with JavaScript */
+    position: inherit; /* Stay in place */
     z-index: 1; /* Stay on top */
     top: 0;
     left: 0;
@@ -263,6 +263,10 @@ body .animate {
     margin-left: 50px;
 }
 
+.leftSidenav button {
+    visibility: hidden;
+}
+
 #body {
     transition: margin-left .5s;
 }
@@ -275,8 +279,8 @@ body .animate {
 .rightSidenav {
     overflow-y: hidden;
     height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
+    width: 100%; /* 0 width - change this with JavaScript */
+    position: inherit; /* Stay in place */
     z-index: 1; /* Stay on top */
     top: 0;
     right: 0;
@@ -302,6 +306,9 @@ body .animate {
     font-size: 36px;
     margin-left: 50px;
 }
+.rightSidenav button {
+    visibility: hidden;
+}
 
 .aboutText {
     margin-bottom: 20px;
@@ -312,9 +319,9 @@ body .animate {
 }
 
 .bottomNav {
-    height: 0; /* 100% Full-height */
+    height: 100%; /* 100% Full-height */
     width: 100%; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
+    position: inherit;; /* Stay in place */
     z-index: 1; /* Stay on top */
     bottom: 0;
     background-color: #ee4266;
@@ -342,17 +349,120 @@ body .animate {
 }
 
 .bottomNav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+    visibility: hidden;
+}
+
+.bottomNav button {
+    visibility: hidden;
 }
 .cursorChange:hover {
     cursor: pointer;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+@media screen and (max-width: 768px) {
+    .bottomNav {
+        height: 0; /* 100% Full-height */
+        width: 100%; /* 0 width - change this with JavaScript */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Stay on top */
+        bottom: 0;
+        background-color: #ee4266;
+        overflow-x: hidden; /* Disable horizontal scroll */
+        transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    }
+    .bottomNav h3 {
+        margin-right: 10%;
+        margin-left: 10%;
+        font-size: 158%;
+    }
+    .bottomNav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s
+    }
+
+    .bottomNav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        visibility: visible;
+    }
+    .bottomNav button {
+        visibility: visible;
+    }
+    .leftSidenav {
+        height: 100%; /* 100% Full-height */
+        width: 0%; /* 0 width - change this with JavaScript */
+        position: fixed;; /* Stay in place */
+        z-index: 1; /* Stay on top */
+        top: 0;
+        left: 0;
+        background-color: #307ECB;
+        overflow-x: hidden; /* Disable horizontal scroll */
+        padding-top: 50px; /* Place content 60px from the top */
+        transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    }
+
+    .leftSidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s
+    }
+
+    .leftSidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+    .leftSidenav button {
+        visibility: inherit;
+    }
+    .rightSidenav {
+        overflow-y: hidden;
+        height: 100%; /* 100% Full-height */
+        width: 0; /* 0 width - change this with JavaScript */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Stay on top */
+        top: 0;
+        right: 0;
+        background-color: #18B155;
+        overflow-x: hidden; /* Disable horizontal scroll */
+        padding-top: 60px; /* Place content 60px from the top */
+        transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    }
+
+    .rightSidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s
+    }
+
+    .rightSidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+    .rightSidenav button {
+        visibility: visible;
+    }
+}
 @media screen and (max-height: 450px) {
     .leftSidenav {padding-top: 15px;}
     .leftSidenav a {font-size: 18px;}
