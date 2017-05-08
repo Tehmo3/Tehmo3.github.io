@@ -9,7 +9,6 @@ var main = function () {
         $.getScript("http://codepen.io/assets/embed/ei.js");
     $(function() {
         $(".typeSpace").typed({
-            strings: ["<p>Hey! ^2000 My name is <b>Jasper Miles</b>, and I'm a full stack web developer from Melbourne, Australia.</p>"],
             typespeed: 1,
             showCursor: false
         });
@@ -22,7 +21,8 @@ var main = function () {
     });
 
     $(window).keydown(function (e) {
-        open = onPress(e.which, open)
+        if ($(window).width() < 992) {
+        }
     })
     $(window).swipe( {
         swipeUp:function(event, direction, distance, duration) {
