@@ -62,7 +62,7 @@ var onPress = function (key, lastKey) {
         lastKey = closeRightNav();
     }
     else if (key === 40 && lastKey === "main") {
-        lastKey = openBottomNav();
+        lastKey = scrollToPortfolio();
     }
     else if (key === 38 && lastKey === "bottom") {
         lastKey = closeBottomNav();
@@ -146,7 +146,7 @@ function check_if_in_view() {
 }
 
 var scrollToPortfolio = function () {
-    $(window).scrollTo(".portfolio", 1000);
+    $(window).scrollTo(".bottomNav", 1000);
 }
 
 
