@@ -143,6 +143,7 @@ body .animate {
 .fadeIn {
     opacity: 0;
     animation: fadeIn 3s ease 6s 1 normal forwards;
+    margin-top: 6em;
 }
 @keyframes fadeIn {
     0% { opacity: 0;}
@@ -288,6 +289,7 @@ body .animate {
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    padding-bottom: 60px;
 }
 
 .rightSidenav a {
