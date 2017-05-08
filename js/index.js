@@ -2,7 +2,7 @@
 var open = "main"; //Easier to make global than use jquery... lazy programming :)
 
 var main = function () {
-    $(window).scrollTo(".animate", 10);
+    $(window).scrollTo(".animate", 1000);
     $(window).on('scroll resize touchmove', check_if_in_view);
         var pageHeight = $(document).height()/4;
         $('.codepen').attr('data-height', pageHeight);
@@ -116,13 +116,6 @@ var showContactForm = function () {
     }, 100);
 }
 
-function wait(ms){
-   var start = new Date().getTime();
-   var end = start;
-   while(end < start + ms) {
-     end = new Date().getTime();
-  }
-}
 
 function check_if_in_view() {
   var $animation_elements = $('.animation_element');
