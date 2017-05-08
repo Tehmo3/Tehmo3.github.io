@@ -44,8 +44,8 @@ var main = function () {
 };
 
 function simulatePress(key) {
-    console.log(key, open);
     open = onPress(key, open);
+        console.log(key, open);
 }
 
 var onPress = function (key, lastKey) {
@@ -147,6 +147,7 @@ function check_if_in_view() {
 
 var scrollToPortfolio = function () {
     $(window).scrollTo(".bottomNav", 1000);
+    return "main"
 }
 
 
