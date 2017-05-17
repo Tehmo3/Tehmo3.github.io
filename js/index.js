@@ -14,6 +14,18 @@ var main = function () {
         });
     });
 
+    $(window).on('resize', function (event) {
+        if ($(window).width() > 992) {
+            var imageWidth = $(".outer").width()
+            var divWidth = $(".outerDiv").width()
+            if (divWidth < imageWidth) {
+                $(".outer").css("right", (imageWidth-divWidth)/2)
+            }
+        }
+        else {
+            $(".outer").css("right", 0)
+        }
+    });
     $('.thumb').hover(function(){
 	       $(this).find('.caption').css('opacity','1');
     }, function(){

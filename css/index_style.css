@@ -119,7 +119,10 @@ body .animate {
     margin-bottom: 0;
 }
 
-
+.outer {
+    position: relative;
+    right: 0px;
+}
 
 .inner {
     width: 450px;
