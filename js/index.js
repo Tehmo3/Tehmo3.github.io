@@ -1,32 +1,39 @@
 
 var currentlyOpen = "main";
 var main = function () {
-    $(window).scrollTo(".animate", 1000);
-    $(window).on('scroll resize touchmove', check_if_in_view);
-    $(function() {
-        $(".typeSpace").typed({
-            strings: ["<p>Hey! ^2000 My name is <b>Jasper Miles</b>, and I'm a junior software developer from Melbourne, Australia.</p>"],
-            typespeed: 1,
-            showCursor: false
-        });
+  checkSize();
+  $(window).scrollTo(".animate", 1000);
+  $(window).on('scroll resize touchmove', check_if_in_view);
+  $(function() {
+    $(".typeSpace").typed({
+      strings: ["<p>Hey! ^2000 My name is <b>Jasper Miles</b>, and I'm a junior software developer from Melbourne, Australia.</p>"],
+      typespeed: 1,
+      showCursor: false
     });
-    $('.thumb').hover(function(){
-	       $(this).find('.caption').css('opacity','1');
-    }, function(){
-	       $(this).find('.caption').css('opacity','0');
-    });
+  });
+  $(window).on('resize', function (event) {
+    checkSize();
+  });
 
 };
 
 
-
+function checkSize() {
+  console.log("hey!");
+  if ($(window).width() > 992) {
+    $(".aboutText").css("display", "inherit");
+  }
+  else {
+    $(".aboutText").css("display", "none");
+  }
+}
 var showContactForm = function () {
-    $("#contactButton").remove();
-    $("#contactForm").css("display", "inherit");
-    $(window).scrollTo("#contactForm", 1000);
-    $("#contactForm").animate({
-        opacity: 1
-    }, 100);
+  $("#contactButton").remove();
+  $("#contactForm").css("display", "inherit");
+  $(window).scrollTo("#contactForm", 1000);
+  $("#contactForm").animate({
+    opacity: 1
+  }, 100);
 }
 
 
@@ -45,15 +52,15 @@ function check_if_in_view() {
 
     //check to see if this current container is within viewport
     if ((element_bottom_position >= window_top_position) &&
-        (element_top_position <= window_bottom_position)) {
+    (element_top_position <= window_bottom_position)) {
       $element.addClass('in-view');
     }
   });
 }
 
 var scrollToPortfolio = function () {
-    $(window).scrollTo(".bottomNav", 1000);
-    return "main"
+  $(window).scrollTo(".bottomNav", 1000);
+  return "main"
 }
 
 
