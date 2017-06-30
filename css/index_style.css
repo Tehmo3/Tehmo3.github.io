@@ -244,7 +244,7 @@ body .animate {
     z-index: 1; /* Stay on top */
     top: 0;
     left: 0;
-    background-color: #307ECB;
+    background-color: #18B155;
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 50px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -279,42 +279,6 @@ body .animate {
     cursor: pointer;
 }
 
-
-.rightSidenav {
-    overflow-y: hidden;
-    height: 100%; /* 100% Full-height */
-    width: 100%; /* 0 width - change this with JavaScript */
-    position: inherit; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0;
-    right: 0;
-    background-color: #18B155;
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-    padding-bottom: 60px;
-}
-
-.rightSidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s
-}
-
-.rightSidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-.rightSidenav button {
-    visibility: hidden;
-}
-
 .aboutText {
     margin-bottom: 20px;
 }
@@ -329,7 +293,7 @@ body .animate {
     position: inherit;; /* Stay in place */
     z-index: 1; /* Stay on top */
     bottom: 0;
-    background-color: #ee4266;
+    background-color: #2196F3;
     overflow-x: hidden; /* Disable horizontal scroll */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
@@ -409,7 +373,7 @@ body .animate {
         z-index: 1; /* Stay on top */
         top: 0;
         left: 0;
-        background-color: #307ECB;
+        background-color: #18B155;
         overflow-x: hidden; /* Disable horizontal scroll */
         padding-top: 50px; /* Place content 60px from the top */
         transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -434,39 +398,6 @@ body .animate {
     .leftSidenav button {
         visibility: inherit;
     }
-    .rightSidenav {
-        overflow-y: hidden;
-        height: 100%; /* 100% Full-height */
-        width: 0; /* 0 width - change this with JavaScript */
-        position: fixed; /* Stay in place */
-        z-index: 1; /* Stay on top */
-        top: 0;
-        right: 0;
-        background-color: #18B155;
-        overflow-x: hidden; /* Disable horizontal scroll */
-        padding-top: 60px; /* Place content 60px from the top */
-        transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-    }
-
-    .rightSidenav a {
-        padding: 8px 8px 8px 32px;
-        text-decoration: none;
-        font-size: 25px;
-        color: #818181;
-        display: block;
-        transition: 0.3s
-    }
-
-    .rightSidenav .closebtn {
-        position: absolute;
-        top: 0;
-        right: 25px;
-        font-size: 36px;
-        margin-left: 50px;
-    }
-    .rightSidenav button {
-        visibility: visible;
-    }
     .fadeIn {
         margin-top: 0;
     }
@@ -474,8 +405,6 @@ body .animate {
 @media screen and (max-height: 450px) {
     .leftSidenav {padding-top: 15px;}
     .leftSidenav a {font-size: 18px;}
-    .rightSidenav {padding-top: 15px;}
-    .rightSidenav a {font-size: 18px;}
     .bottomNav {padding-top: 15px;}
     .bottomNav a {font-size: 18px;}
 }
