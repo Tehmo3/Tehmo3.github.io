@@ -1,11 +1,8 @@
 
-
+var currentlyOpen = "main";
 var main = function () {
     $(window).scrollTo(".animate", 1000);
     $(window).on('scroll resize touchmove', check_if_in_view);
-        var pageHeight = $(document).height()/4;
-        $('.codepen').attr('data-height', pageHeight);
-        $.getScript("http://codepen.io/assets/embed/ei.js");
     $(function() {
         $(".typeSpace").typed({
             strings: ["<p>Hey! ^2000 My name is <b>Jasper Miles</b>, and I'm a junior software developer from Melbourne, Australia.</p>"],
@@ -13,112 +10,15 @@ var main = function () {
             showCursor: false
         });
     });
-
-    $(window).on('resize', function (event) {
-        if ($(window).width() > 992) {
-            var imageWidth = $(".outer").width()
-            var divWidth = $(".outerDiv").width()
-            if (divWidth < imageWidth) {
-                $(".outer").css("right", (imageWidth-divWidth)/2)
-            }
-        }
-        else {
-            $(".outer").css("right", 0)
-        }
-    });
     $('.thumb').hover(function(){
 	       $(this).find('.caption').css('opacity','1');
     }, function(){
 	       $(this).find('.caption').css('opacity','0');
     });
 
-    $(window).keydown(function (e) {
-        if ($(window).width() < 992) {
-            open = onPress(e.which, open)
-        }
-    })
-    $(window).swipe( {
-        swipeUp:function(event, direction, distance, duration) {
-            simulatePress(40);
-        },
-        swipeDown:function(event, direction, distance, duration) {
-            simulatePress(38);
-        },
-        swipeLeft:function(event, direction, distance, duration) {
-            simulatePress(39);
-        },
-        swipeRight:function(event, direction, distance, duration) {
-            simulatePress(37);
-        },
-        threshold:100,
-        allowPageScroll:"vertical"
-    });
-
 };
 
-function simulatePress(key) {
-    open = onPress(key, open);
-        console.log(key, open);
-}
 
-var onPress = function (key, lastKey) {
-    if (key === 37 && lastKey === "main") {
-        lastKey = openLeftNav();
-    }
-    else if (key === 39 && lastKey === "left") {
-        lastKey = closeLeftNav();
-    }
-    else if (key === 39 && lastKey === "main") {
-        lastKey = openRightNav();
-    }
-    else if (key === 37 && lastKey === "right") {
-        lastKey = closeRightNav();
-    }
-    else if (key === 40 && lastKey === "main") {
-        lastKey = scrollToPortfolio();
-    }
-    else if (key === 38 && lastKey === "bottom") {
-        lastKey = closeBottomNav();
-    }
-    return lastKey;
-};
-
-/* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
-function openLeftNav() {
-    document.getElementById("leftSidenav").style.width = "100%";
-    return "left";
-}
-
-/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
-function closeLeftNav() {
-    $(window).scrollTo(".animate", 10);
-    document.getElementById("leftSidenav").style.width = "0";
-    return "main";
-}
-
-function openRightNav() {
-    document.getElementById("rightSidenav").style.width = "100%";
-    return "right";
-}
-
-/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
-function closeRightNav() {
-    $(window).scrollTo(".animate", 10);
-    document.getElementById("rightSidenav").style.width = "0";
-    return "main";
-}
-
-function openBottomNav() {
-    document.getElementById("bottomNav").style.height = "100%";
-    return "bottom";
-}
-
-/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
-function closeBottomNav() {
-    $(window).scrollTo(".animate", 10);
-    document.getElementById("bottomNav").style.height = "0";
-    return "main";
-}
 
 var showContactForm = function () {
     $("#contactButton").remove();
