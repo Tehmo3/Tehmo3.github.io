@@ -19,7 +19,6 @@ var main = function () {
 
 
 function checkSize() {
-  console.log("hey!");
   if ($(window).width() > 992) {
     $(".aboutText").css("display", "inherit");
   }

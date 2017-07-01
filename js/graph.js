@@ -56,7 +56,6 @@ function addNode() {
 var level = 0;
 var j = 1;
 function draw() {
-  console.log("DRAWING!");
   if (started) {
     if (i%15 == 0 && newNodes) { graph.push(getNode()); }
     graph.forEach(function(node) {
