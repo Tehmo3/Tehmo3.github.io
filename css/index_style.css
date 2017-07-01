@@ -4,6 +4,7 @@ body {
     color: white;
     font-family: 'Signika', sans-serif;
     animation: lockScroll 0.1s ease 6s 1 normal forwards;
+    overflow-x: hidden;
 }
 
 @keyframes lockScroll {
@@ -326,6 +327,13 @@ body .animate {
 }
 .cursorChange:hover {
     cursor: pointer;
+}
+
+#defaultCanvas0 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10000;
 }
 
 @media screen and (max-height: 450px) {
