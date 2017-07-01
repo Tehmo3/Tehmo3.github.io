@@ -42,7 +42,7 @@ setTimeout(function() {
 }, 4000)
 setTimeout(function() {
   newNodes = false;
-}, 25000)
+}, 20000)
 
 
 function addNode() {
@@ -54,7 +54,7 @@ function addNode() {
 
 function draw() {
   if (started) {
-    if (i%10 == 0 && newNodes) { graph.push(getNode()); }
+    if (i%15 == 0 && newNodes) { graph.push(getNode()); }
     graph.forEach(function(node) {
       if (node.age < 1) { node.age += 10 }
       strokeWeight(10);
