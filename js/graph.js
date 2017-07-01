@@ -6,13 +6,16 @@ var started = false;
 var newNodes = true;
 var radius = 0;
 var i = 0;
+var bfsDone = false;
 var maxRadius = Math.max(w/2, h/2);
 var sign = Math.random() >= 0.5 ? 1: -1;
 class Node {
   constructor(settings) {
     this.pos = settings.pos,
     this.edges = settings.edges,
-    this.age = settings.age
+    this.age = settings.age,
+    this.visited = false,
+    this.order = 0
   }
 }
 
@@ -25,9 +28,6 @@ defaultSettings = {
 graph.push(getNode());
 
 
-function preload() {
-  setTimeout(function() { return false}, 5000);
-}
 function setup() {
 	// createCanvas must be the first statement
   createCanvas(w, h);
@@ -42,6 +42,7 @@ setTimeout(function() {
 }, 4000)
 setTimeout(function() {
   newNodes = false;
+  BFS();
 }, 20000)
 
 
@@ -52,13 +53,28 @@ function addNode() {
   }
 }
 
+var level = 0;
+var j = 1;
 function draw() {
+  console.log("DRAWING!");
   if (started) {
     if (i%15 == 0 && newNodes) { graph.push(getNode()); }
     graph.forEach(function(node) {
       if (node.age < 1) { node.age += 10 }
       strokeWeight(10);
-      stroke(255, 255, 255, node.age);
+      if (!bfsDone) {
+        stroke(255, 255, 255, node.age);
+      }
+      else if (bfsDone && node.order <= level) {
+        if (j%120 == 0) {
+          level++;
+        }
+        j++;
+        stroke(0, 0, 0, node.age)
+      }
+      else {
+        stroke(0,0,0,0);
+      }
       ellipse(node.pos[0], node.pos[1], 10);
       node.edges.forEach(function(edge) {
         var to = graph[edge];
@@ -80,7 +96,7 @@ function getNode() {
   if (radius > maxRadius) {
     radius = Math.min(h, w) - 100;
   }
-  var node = new Node({pos: [x,y], edges: [], age: 0});
+  var node = new Node({pos: [x,y], edges: [], age: 0, visited: false, order: 0});
   if (!isVisibleNode(node)) {
     return getNode();
   }
@@ -98,6 +114,7 @@ function createEdges(node) {
     if (distance < h/2) {
       if ((distance < h/4 && Math.random() >= 0.5) || (distance >= h/4 && Math.random() >= 0.3)) {
         node.edges.push(index)
+        node2.edges.push(graph.length)
       }
     }
   })
@@ -109,4 +126,48 @@ function getDistance(node1, node2) {
   var rise = (node2.pos[1] - node1.pos[1]) > 0 ? node2.pos[1] - node1.pos[1] : node1.pos[1] - node2.pos[1];
   var distance = Math.sqrt(Math.pow(run, 2) + Math.pow(rise, 2));
   return distance;
+}
+
+
+function BFS() {
+  var x = 1;
+  let q = [];
+  graph[0].visited = true;
+  graph[0].age = 0;
+  graph[0].order = 0;
+  q.push(graph[0]);
+
+  while (q.length !== 0) {
+    let current = q.shift();
+    var level = [];
+    current.edges.forEach(function(edge) {
+      if (graph[edge].visited === false) {
+        graph[edge].order = x;
+        graph[edge].visited = true;
+        graph[edge].age = 0;
+        q.push(graph[edge]);
+      }
+    })
+    x++;
+  }
+  bfsDone = true;
+
+}
+
+function containsObject(obj, list) {
+    var i;
+    for (i = 0; i < list.length; i++) {
+        if (list[i] === obj) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+function sleep(miliseconds) {
+   var currentTime = new Date().getTime();
+
+   while (currentTime + miliseconds >= new Date().getTime()) {
+   }
 }
