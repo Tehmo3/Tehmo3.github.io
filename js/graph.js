@@ -29,16 +29,16 @@ function setup() {
   createCanvas(w, h);
   background(254,95,85);
   stroke(255);     // Set line drawing color to white
-  noLoop();
+  frameRate(2);
 }
 
-var intervalID = setInterval(addNode, 500);
 setTimeout(function() {
   started = true;
 }, 3000)
 setTimeout(function() {
-  clearInterval(intervalID);
+  started = false;
 }, 23000)
+
 
 function addNode() {
   if (started) {
@@ -49,6 +49,7 @@ function addNode() {
 
 function draw() {
   if (started) {
+    graph.push(getNode());
     graph.forEach(function(node) {
       strokeWeight(10);
       ellipse(node.pos[0], node.pos[1], 10);
