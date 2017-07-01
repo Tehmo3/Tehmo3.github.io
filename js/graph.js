@@ -3,6 +3,7 @@ var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
 
 var graph = [];
 var started = false;
+var newNodes = true;
 var radius = 0;
 var i = 0;
 var maxRadius = Math.max(w/2, h/2);
@@ -40,7 +41,7 @@ setTimeout(function() {
   started = true;
 }, 4000)
 setTimeout(function() {
-  started = false;
+  newNodes = false;
 }, 25000)
 
 
@@ -53,7 +54,7 @@ function addNode() {
 
 function draw() {
   if (started) {
-    if (i%10 == 0) { graph.push(getNode()); }
+    if (i%10 == 0 && newNodes) { graph.push(getNode()); }
     graph.forEach(function(node) {
       if (node.age < 1) { node.age += 10 }
       strokeWeight(10);
