@@ -4,18 +4,21 @@ var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
 var graph = [];
 var started = false;
 var radius = 0;
+var i = 0;
 var maxRadius = Math.max(w/2, h/2);
 var sign = Math.random() >= 0.5 ? 1: -1;
 class Node {
   constructor(settings) {
     this.pos = settings.pos,
-    this.edges = settings.edges
+    this.edges = settings.edges,
+    this.age = settings.age
   }
 }
 
 defaultSettings = {
   pos: [w/2, h/2],
-  edges: []
+  edges: [],
+  age: 0
 }
 
 graph.push(getNode());
@@ -29,15 +32,16 @@ function setup() {
   createCanvas(w, h);
   background(254,95,85);
   stroke(255);     // Set line drawing color to white
-  frameRate(2);
+  noFill();
+  frameRate(30);
 }
 
 setTimeout(function() {
   started = true;
-}, 3000)
+}, 4000)
 setTimeout(function() {
   started = false;
-}, 23000)
+}, 25000)
 
 
 function addNode() {
@@ -49,9 +53,11 @@ function addNode() {
 
 function draw() {
   if (started) {
-    graph.push(getNode());
+    if (i%10 == 0) { graph.push(getNode()); }
     graph.forEach(function(node) {
+      if (node.age < 1) { node.age += 10 }
       strokeWeight(10);
+      stroke(255, 255, 255, node.age);
       ellipse(node.pos[0], node.pos[1], 10);
       node.edges.forEach(function(edge) {
         var to = graph[edge];
@@ -60,6 +66,7 @@ function draw() {
       });
     });
   }
+  i++;
 }
 
 function getNode() {
@@ -72,7 +79,7 @@ function getNode() {
   if (radius > maxRadius) {
     radius = Math.min(h, w) - 100;
   }
-  var node = new Node({pos: [x,y], edges: []});
+  var node = new Node({pos: [x,y], edges: [], age: 0});
   if (!isVisibleNode(node)) {
     return getNode();
   }
@@ -81,7 +88,7 @@ function getNode() {
 }
 
 function isVisibleNode(node) {
-  return (node.pos[0] < w && node.pos[1] < h);
+  return (node.pos[0] < w-100 && node.pos[1] < h-100);
 }
 
 function createEdges(node) {
