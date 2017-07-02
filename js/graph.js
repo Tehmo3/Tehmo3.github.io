@@ -43,7 +43,6 @@ if( !(/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator
  }, 4000)
  setTimeout(function() {
    newNodes = false;
-   BFS();
  }, 20000)
 
 
@@ -62,19 +61,7 @@ if( !(/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator
      graph.forEach(function(node) {
        if (node.age < 1) { node.age += 10 }
        strokeWeight(10);
-       if (!bfsDone) {
-         stroke(255, 255, 255, node.age);
-       }
-       else if (bfsDone && node.order <= level) {
-         if (j%120 == 0) {
-           level++;
-         }
-         j++;
-         stroke(0, 0, 0, node.age)
-       }
-       else {
-         stroke(0,0,0,0);
-       }
+        stroke(255, 255, 255, node.age);
        ellipse(node.pos[0], node.pos[1], 10);
        node.edges.forEach(function(edge) {
          var to = graph[edge];
@@ -148,30 +135,6 @@ if( !(/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator
  }
 
 
- function BFS() {
-   var x = 1;
-   let q = [];
-   graph[0].visited = true;
-   graph[0].age = 0;
-   graph[0].order = 0;
-   q.push(graph[0]);
-
-   while (q.length !== 0) {
-     let current = q.shift();
-     var level = [];
-     current.edges.forEach(function(edge) {
-       if (graph[edge].visited === false) {
-         graph[edge].order = x;
-         graph[edge].visited = true;
-         graph[edge].age = 0;
-         q.push(graph[edge]);
-       }
-     })
-     x++;
-   }
-   bfsDone = true;
-
- }
 
  function containsObject(obj, list) {
    var i;
